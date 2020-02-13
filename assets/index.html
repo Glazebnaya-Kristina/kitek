@@ -11,21 +11,43 @@
   <meta name="format-detection" content="address=no">
   <meta name="format-detection" content="email=no">
   <meta name="google" content="notranslate">
-  <title>Название проекта</title>
+  <title>Главная | Kitek</title>
   <meta name="description" content="">
   <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
   <link type="text/css" rel="stylesheet" href="../css/style.css" data-inprogress="">
   <link type="text/css" rel="stylesheet" href="../css/home.css" data-inprogress="">
 </head>
 
-<body>
+<body class="theme-white">
 <!-- build:section layout.header-->
 <!-- /build -->
 
-<section class="section">
-  <div class="container"></div>
+<!-- Секция Главный баннер -->
+<section class="main-banner">
+  <div class="main-banner__inner">
+    <div class="main-banner__wrapper-decor"></div>
+    <div class="main-banner__content">
+      <h1 class="main-banner__title">
+        <span>We thrive on</span>
+        <strong class="main-banner__title-strong main-banner__title-strong--green">helping start-ups</strong>
+        &
+        <strong class="main-banner__title-strong">improving existing products</strong>
+      </h1>
+      <p class="main-banner__description">Lorem ipsum dolor sit amet, sed fames, turpis aliquam, ullamcorper mollis.
+        Adipiscing vivamus, non habitasse, aenean arcu. Mauris sodales donec. Felis id proin. Nullam ac ultrices. Donec
+        ut elit.</p>
+    </div>
+  </div>
 </section>
 
+
+
+
+
+<div class="row-swish">
+  <button class="swish">изменить тему на черную</button>
+  <button class="swish-back">изменить тему на белую</button>
+</div>
 
 
 <section class="modal">
@@ -76,62 +98,6 @@
       </div>
     </div>
   </div>
-
-  <!-- Модальное окно Спасибо за РЕГЕСТРИЦИЮ -->
-  <div class="popup popup--small modal__thanks-registration" data-modal="thanks-registration">
-    <div class="modal__dialog">
-      <div class="modal__header modal__header--center">
-        <h3 class="modal__title modal__title--element title title--element">Спасибо Вам за регистрацию</h3>
-      </div>
-      <div class="modal__content modal__content--center">
-        <button class="button button--border-transparent button--modal js-open-modal"
-                data-modal="sign-in" type="button">Закрыть
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Модальное окно ВВОЙТИ -->
-  <div class="popup popup--big popup--hight modal__sign-in" data-modal="sign-in">
-    <div class="modal__dialog">
-      <div class="modal__header modal__header--line">
-        <h3 class="modal__title">Вход</h3>
-        <button class="modal__close close close--grey-dark close--icon" type="button">
-          <span class="close__description">Закрыть модальное окно</span>
-          <i class="icon-error"></i>
-        </button>
-      </div>
-      <div class="modal__content modal__content--center">
-        <form action="#" class="form">
-          <div class="form__wrapper form__wrapper--column-2">
-            <p>
-              <label class="label">
-                <span class="label__name">E-mail</span>
-                <input type="email" class="input" placeholder="E-mail">
-              </label>
-              <button type="button" class="button link link--blue modal__sign-in-link js-open-modal"
-                      data-modal="registration">Регистрация
-              </button>
-            </p>
-            <p>
-              <label class="label">
-                <span class="label__name">Пароль</span>
-                <input type="password" class="input" placeholder="Пароль">
-              </label>
-              <button type="button" class="button link link--blue modal__sign-in-link js-open-modal"
-                      data-modal="password-reminder">Напомнить пароль
-              </button>
-            </p>
-          </div>
-          <span class="text-error">Ошибка...</span>
-          <a href="personal-area.html" class="button button--blue button--xs-s modal__sign-in-button">
-            Войти
-          </a>
-        </form>
-      </div>
-    </div>
-  </div>
-
   <!-- Подложка под модальным окном -->
   <div class="modal__overlay modal__overlay--opened js-overlay-modal"></div>
 </section>
@@ -141,8 +107,8 @@
 
 
 <script src="../js/jquery.min.js"></script>
-<!--<script src="../js/script.min.js"></script>-->
-<!--<script src="../js/home.min.js"></script>-->
+<script src="../js/script.min.js"></script>
+<script src="../js/home.min.js"></script>
 
 </body>
 

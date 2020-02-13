@@ -1,11 +1,73 @@
 // Подключения блоков
 //@import "../blocks/button";
 // Подключения спомогательных файлов
-//@import "../helper/animations";
+@import "../helper/container-mixins";
+@import "../helper/variables";
+@import "../helper/mixins";
 //
 // Подключения бибилиотек
 //@import "../libs/slick";
 
 .header {
   $block-name:                &; // #{$block-name}__element
+
+  padding: 20px 0 26px;
+  @media (min-width: $screen-1400) {
+    padding: 27px 0 35px;
+  }
+
+  &__inner{
+    @include container;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo-link{
+    z-index: 7;
+  }
+  &__burger{
+    margin-left: auto;
+    @media (min-width: $screen-1024) {
+      display: none;
+    }
+  }
+
+  &__navigation-wrapper{
+    background-color: #e2e7e7;
+    @media (min-width: $screen-1024) {
+      background-color: transparent;
+    }
+  }
+
+  &__navigation{
+    @media (min-width: $screen-1024) {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+    }
+  }
+
+  &__button{
+    display: none;
+    @media (min-width: $screen-1024) {
+      display: inline-flex;
+      margin-left: 30px
+    }
+    @media (min-width: $screen-1280) {
+      display: inline-flex;
+      margin-left: 60px
+    }
+    @media (min-width: $screen-1600) {
+      margin-left: 155px;
+    }
+  }
+}
+
+
+.theme-black{
+  .header{
+    &__navigation-wrapper{
+      background-color: $black;
+    }
+  }
 }
