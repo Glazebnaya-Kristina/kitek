@@ -5,7 +5,7 @@
   $block-name: &; // #{$block-name}__element
 
   margin-top: 32px;
-  padding: 81px 0 155px;
+  padding: 81px 0 150px;
   background-color: #2b2e2d;
   @media (min-width: $screen-768) {
     margin-top: 0;
@@ -254,7 +254,7 @@
 
   &__arrow-carousel {
     position: absolute;
-    bottom: -67px;
+    bottom: -60px;
     font-size: 24px;
 
     &--next {

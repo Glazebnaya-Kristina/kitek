@@ -1,0 +1,216 @@
+@import "../../helper/variables";
+@import "../../helper/mixins";
+
+.advantages {
+  $block-name: &; // #{$block-name}__element
+
+
+  padding: 77px 0 166px;
+  background-color: #e7e7f1;
+  @media (min-width: $screen-1400) {
+    position: relative;
+    padding-bottom: 133px;
+    background-color: transparent;
+  }
+  
+  &:after{
+    @include pseudo;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    display: none;
+    width: 95%;
+    height: 100%;
+    background-color: #e7e7f1;
+    @media (min-width: $screen-1400) {
+      display: block;
+    }
+    @media (min-width: $screen-1600) {
+      width: 93.2%;
+    }
+  }
+  &:before{
+    @include pseudo;
+    right: 0;
+    bottom: -125px;
+    z-index: -1;
+    display: none;
+    width: 504px;
+    height: 629px;
+    background-image: url('../img/index/advantages2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @media (min-width: $screen-1400) {
+      display: block;
+    }
+  }
+
+  &__decor{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    pointer-events: none;
+    display: none;
+    width: 317px;
+    height: 178px;
+    background-image: url('../img/index/advantages1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @media (min-width: $screen-1400) {
+      display: block;
+    }
+  }
+
+  &__inner {
+    @include container;
+    position: relative;
+  }
+
+  &__title {
+    @media (min-width: $screen-1024) {
+      position: absolute;
+      left: 0;
+      top: 73px;
+      z-index: 1;
+      text-align: left;
+    }
+    @media (min-width: $screen-1400) {
+      top: 39px;
+      line-height: 54px;
+    }
+  }
+  
+  &__title-strong{
+    @media (min-width: $screen-1024) {
+      display: block;
+    }
+  }
+
+  &__carousel {
+    @include ul-reset;
+    position: relative;
+    max-width: 290px;
+    margin: 0 auto;
+    margin-top: 77px;
+    @media (min-width: $screen-768) {
+      max-width: none;
+    }
+    @media (min-width: $screen-1024) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 40px 20px;
+      margin-top: 45px;
+    }
+  }
+
+  &__item{
+    &:nth-child(1){
+      grid-column: 2 / 3;
+    }
+
+  }
+
+  &__item-img {
+    display: block;
+    width: 80px;
+    margin: 0 auto;
+    @media (min-width: $screen-1024) {
+      margin: 0;
+    }
+  }
+
+  &__item-title {
+    margin: 0;
+    margin-top: 40px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    @media (min-width: $screen-1024) {
+      margin-top: 34px;
+      font-size: 22px;
+      text-align: left;
+    }
+    @media (min-width: $screen-1280) {
+      font-size: 30px;
+    }
+  }
+
+  &__item-description{
+    margin-top: 19px;
+    color: #585858;
+    font-size: 18px;
+    line-height: 23px;
+    @media (min-width: $screen-1024) {
+      font-size: 16px;
+    }
+    @media (min-width: $screen-1280) {
+      margin-top: 48px;
+      font-size: 18px;
+    }
+    @media (min-width: $screen-1400) {
+      padding-right: 42px;
+    }
+  }
+
+
+  &__arrow-carousel {
+    position: absolute;
+    bottom: -76px;
+    font-size: 24px;
+    color: $color-black-white-theme;
+
+    &:after{
+      border-color: $color-black-white-theme;
+    }
+
+    &--next {
+      right: 32%;
+    }
+
+    &--prev {
+      left: 32%;
+    }
+  }
+}
+
+.theme-black {
+  .advantages {
+    background-color: $black;
+    @media (min-width: $screen-1400) {
+      background-color: transparent;
+    }
+
+    &:after{
+      @media (min-width: $screen-1400) {
+        background-color: $black;
+      }
+    }
+
+    &:before{
+      @media (min-width: $screen-1400) {
+        background-image: url('../img/index/advantages2-black.png');
+      }
+    }
+
+    &__decor{
+      @media (min-width: $screen-1400) {
+        background-image: url('../img/index/advantages1-black.png');
+      }
+    }
+
+    &__item-description{
+      color: #979797;
+    }
+
+    &__arrow-carousel{
+      color: $color-white-white-theme;
+      &:after{
+        border-color: #2d2d2d;
+      }
+    }
+  }
+}
+

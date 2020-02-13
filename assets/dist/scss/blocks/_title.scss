@@ -1,13 +1,19 @@
 .title {
   margin: 0;
-  font-family: 'Cormorant Garamond';
-  font-weight: 700;
   font-size: 30px;
+  font-weight: 700;
   text-align: center;
-  @media (min-width: $screen-768) {
-    font-size: 35px;
+
+  @media (min-width: $screen-1024) {
+    font-size: 38px;
+    line-height: 38px;
   }
   @media (min-width: $screen-1280) {
-    font-size: 50px;
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  &__strong {
+    color: $color-green;
   }
 }
