@@ -5,6 +5,9 @@
   border: none;
   background-color: transparent;
   color: $color-white-white-theme;
+  &:focus{
+    outline: none;
+  }
 
   &--prev{
     i{
