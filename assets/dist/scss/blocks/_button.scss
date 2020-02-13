@@ -5,14 +5,13 @@
   align-items: center;
   justify-content: center;
   margin: 0;
-  padding: 15px 59px;
+  padding: 5.7px 19px;
   width: max-content;
-  max-width: 222px;
   font-family: inherit;
-  font-size: $font-size;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 700;
   color: inherit;
-  line-height: $line-height;
+  line-height: 22px;
   text-decoration: none;
   text-transform: none;
   white-space: nowrap;
@@ -23,4 +22,9 @@
   cursor: pointer;
   transition-property: background-color, color, box-shadow;
   transition-duration: $transition-time;
+
+  &--border{
+    border-radius: 50px;
+    border: 2px solid $color-blue;
+  }
 }

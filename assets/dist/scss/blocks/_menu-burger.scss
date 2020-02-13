@@ -1,16 +1,26 @@
 .menu-burger{
   $block-name:                &; // #{$block-name}__element
-  position: absolute;
-  bottom: -55px;
-  left: 15px;
-  z-index: 1;
-  width: 20px;
-  height: 25px;
+  //position: absolute;
+  //bottom: -55px;
+  //left: 15px;
+  //z-index: 1;
+  position: relative;
+  width: 30px;
+  height: 18px;
   border: none;
   background-color: transparent;
-  &:focus{
+  cursor: pointer;
+  &:focus,
+  &:hover{
     outline: none;
-    opacity: .5;
+    #{$block-name}__toggle-line{
+      background-color: $color-green;
+
+      &:after,
+      &:before{
+        background-color: $color-green;
+      }
+    }
   }
   &__rel{
     @include hide-text;
@@ -20,7 +30,8 @@
     left: 0;
     width: 100%;
     height: 2px;
-    //background-color: $white;
+    background-color: $black;
+    transition: $transition-time;
 
     &::before {
       position: absolute;
@@ -29,7 +40,7 @@
       transform: translateY(-7px);
       width: 100%;
       height: 2px;
-      //background-color: $white;
+      background-color: $black;
     }
 
     &::after {
@@ -38,7 +49,7 @@
       transform: translateY(7px);
       width: 100%;
       height: 2px;
-      //background-color: $white;
+      background-color: $black;
     }
 
     &::before,
@@ -49,37 +60,44 @@
     }
   }
 
-  &--white{
-    #{$block-name}__toggle-line{
-      background-color: $white;
-      &::before {
-        background-color: $white;
-      }
-      &::after {
-        background-color: $white;
-      }
-    }
-  }
-  &--black{
-    #{$block-name}__toggle-line{
-      background-color: $black;
-      &::before {
-        background-color: $black;
-      }
-      &::after {
-        background-color: $black;
-      }
-    }
-  }
+  //&--white{
+  //  #{$block-name}__toggle-line{
+  //    background-color: $white;
+  //    &::before {
+  //      background-color: $white;
+  //    }
+  //    &::after {
+  //      background-color: $white;
+  //    }
+  //  }
+  //}
+  //&--black{
+  //  #{$block-name}__toggle-line{
+  //    background-color: $black;
+  //    &::before {
+  //      background-color: $black;
+  //    }
+  //    &::after {
+  //      background-color: $black;
+  //    }
+  //  }
+  //}
 
   &--open{
-    position: fixed;
-    top: 25px;
-    bottom: 30px;
+    //position: fixed;
+    //top: 25px;
+    //bottom: 30px;
     z-index: 7;
-    &:focus{
+    &:focus,
+    &:hover{
       outline: none;
-      opacity: .5;
+      #{$block-name}__toggle-line{
+        background-color: transparent;
+        &:after,
+        &:before{
+          background-color: $color-green;
+        }
+      }
     }
     .menu-burger__toggle-line {
       background-color: transparent;
@@ -92,6 +110,23 @@
         transform: rotate(-45deg);
         margin-top: 0;
         background-color: $black;
+      }
+    }
+  }
+}
+
+.theme-black{
+  .menu-burger{
+    &__toggle-line{
+      background-color: $color-white-white-theme;
+      &::before,
+      &::after {
+        background-color: $color-white-white-theme;
+      }
+    }
+    &--open{
+      .menu-burger__toggle-line{
+        background-color: transparent;
       }
     }
   }

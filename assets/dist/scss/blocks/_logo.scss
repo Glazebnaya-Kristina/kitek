@@ -1,5 +1,8 @@
 .logo{
-
+  width: 118px;
+  @media (min-width: $screen-1400) {
+    width: 142px;
+  }
   &__name{
     @include hide-text;
   }

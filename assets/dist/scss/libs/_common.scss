@@ -12,15 +12,16 @@
 * {
   -webkit-tap-highlight-color: transparent;
 }
+* {
+  background-color: inherit;
+}
 
 .page {
   $block-name:                &; // #{$block-name}__element
 
   box-sizing: border-box;
-
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-text-size-adjust: 100%;
-
   min-width: 320px;
   min-height: 100%;
 }
@@ -30,22 +31,78 @@ body {
   min-height: 100%;
   word-break: break-word;
   font-family: $font-family;
-  font-size: 14px;
+  font-size: 18px;
   line-height: $line-height;
   text-align: left;
-  //color: $text-color-gray-dark2;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-
-  @media (min-width: $screen-lg) {
-    font-size: $font-size;
-  }
+  transition: $transition-time;
 }
 
 .hidden{
   overflow: hidden;
+}
+
+.theme-black{
+  color: $color-white-white-theme;
+  background-color: #0b0b0b;
+  //:root {
+  //  background-color: #fefefe;
+  //  filter: invert(100%);
+  //}
+  //
+  //img:not([src*=".svg"]), video {
+  //  filter: invert(100%);
+  //}
+  //
+  //img{
+  //  filter: invert(0);
+  //}
+}
+
+.black-theme{
+  //display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  opacity: 0;
+  transition: $transition-time;
+  color: $color-white-white-theme;
+
+  &--active{
+    //display: block;
+    position: relative;
+    width: auto;
+    height: auto;
+    clip: auto;
+    overflow: visible;
+    opacity: 1;
+  }
+}
+
+.white-theme{
+  //display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  opacity: 0;
+  transition: $transition-time;
+  color: $color-black-white-theme;
+
+  &--active{
+    //display: block;
+    position: relative;
+    width: auto;
+    height: auto;
+    clip: auto;
+    overflow: visible;
+    opacity: 1;
+  }
 }
 
 .anchor{
@@ -118,7 +175,6 @@ html [type="button"],
   -webkit-appearance: button; // Коррекция проблем стилизации для Safari
   //font: inherit;
   font-family: inherit;
-  line-height: inherit;
 }
 
 button::-moz-focus-inner,
@@ -260,14 +316,14 @@ pre {
 
 code {
   padding: 0.06em 0.3em;
-  color: $text-color;
+  color: $black;
   background-color: rgba(#000, 0.08);
   border-radius: $field-border-radius;
 }
 
 kbd {
   padding: 0.06em 0.3em;
-  color: $text-color;
+  color: $black;
   background-color: $gray-lightest;
   border-radius: $field-border-radius;
 

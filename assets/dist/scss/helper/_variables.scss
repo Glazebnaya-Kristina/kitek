@@ -6,7 +6,7 @@ $screen-768:                  768px;
 $screen-1024:                 1024px;
 $screen-1280:                 1280px;
 $screen-1400:                 1400px;
-$screen-1600:                 1600px;
+$screen-1600:                 1570px;
 
 $container-sm:                100%;
 //$container-md:                648px;
@@ -41,9 +41,15 @@ $color-warning:               hsl(35, 84%, 62%);
 
 
 // цвета для текущего проекта
-//$text-color-brown:            #362e2f;
-
-//$color-gold:                  #b88c41;
+$color-black:                  #15151a;
+$color-black-white-theme:      #0e0c0a;
+$color-white-white-theme:      #f5f5f5;
+$color-blue:                   #3b38bf;
+$color-green:                  #6abb9f;
+$color-grey:                   #e2e7e7;
+$color-grey-light:             #3d3d3d;
+$color-red:                    #fd7967;
+$color-red-light:              #efd6d6;
 
 
 
@@ -63,22 +69,20 @@ $color-skype:                      #00aff0;
 
 
 // Семантические цвета
-$body-background:             $white;
-$text-color:                  $gray-darkest;
-$text-color--muted:           $gray;
-$link-color:                  $text-color;
-$link-color--hover:           darken($text-color, 15%);
+//$body-background:             $white;
+//$text-color:                  $gray-darkest;
+//$text-color--muted:           $gray;
+//$link-color:                  $text-color;
+//$link-color--hover:           darken($text-color, 15%);
 
 
 
 // Базовая типографика
-$font-size:                   16px;
+$font-size:                   18px;
 $font-size-sm:                0.75em;
-$line-height:                 1.5;
-$font-family:                'Gotham Pro';
-$font-family-Cormorant:      'Cormorant Garamond';
-$font-family-Narrow:         'Gotham Pro Narrow';
-$font-family--monospace:     SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+$line-height:                 30px;
+$font-family:                 'Poppins';
+$font-family--monospace:      SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 
 
 
@@ -90,8 +94,8 @@ $field-border-radius:           3px;
 $field-padding-vertical:        5px;
 $field-padding-horizontal:      10px;
 
-$toggle-part-bg-color:         $white;
-$toggle-part-height:           2px;
+$toggle-part-bg-color:          $white;
+$toggle-part-height:            2px;
 
 $transition-time:               0.25s;
 $box-shadow:                    0 0 2px transparentize($black, 0.5);

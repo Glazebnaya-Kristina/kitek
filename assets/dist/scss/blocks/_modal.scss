@@ -11,23 +11,15 @@
   padding-bottom: 30px;
   background-color: #fff;
   //border: 1px solid $color-gold;
-  @media (min-width: $screen-md) {
+  @media (min-width: $screen-768) {
     padding: 11px 30px;
     padding-bottom: 30px;
     height: auto;
   }
 
-  &--hight {
-    .modal__content {
-      height: 500px;
-      width: auto !important;
-    }
-  }
-
   &--opened {
     display: block;
   }
-
 }
 
 .modal {
@@ -74,17 +66,8 @@
 
   &__title {
     margin: 0;
-    font-family: $font-family-Cormorant;
     font-weight: 400;
     font-size: 22px;
-    //color: $text-color-gray-dark3;
-    @media (min-width: $screen-md) {
-      font-size: 24px;
-    }
-    @media (min-width: $screen-xl) {
-      font-size: 36px;
-      line-height: 33px;
-    }
   }
 
   &__dialog {
