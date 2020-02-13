@@ -1,0 +1,141 @@
+@import "../../helper/variables";
+@import "../../helper/mixins";
+
+.main-banner{
+  $block-name:                &; // #{$block-name}__element
+
+  @media (min-width: $screen-768) {
+    position: relative;
+    padding: 50px 0;
+    background-color: #e7e7f1;
+    overflow: hidden;
+  }
+  @media (min-width: $screen-1280) {
+    padding: 127px 0 130px;
+  }
+  &__wrapper-decor{
+    position: relative;
+    width: 100%;
+    height: 246px;
+    background-color: #e7e7f1;
+    @media (min-width: $screen-768) {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      background-color: transparent;
+    }
+    &:after{
+      @include pseudo;
+      right: 0;
+      top: 0;
+      width: 368px;
+      height: 100%;
+      background-image: url('../img/index/main-banner.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      @media (min-width: $screen-768) {
+        right: -50px;
+        width: 307px;
+      }
+      @media (min-width: $screen-1024) {
+        right: 0;
+        width: 350px;
+      }
+      @media (min-width: $screen-1280) {
+        width: 486px;
+      }
+      @media (min-width: $screen-1600) {
+        width: 1000px;
+      }
+    }
+  }
+
+  &__content{
+    @include container;
+    @media (min-width: $screen-768) {
+      z-index: 2;
+      position: relative;
+      background-color: transparent;
+    }
+  }
+
+  &__title{
+    margin: 0;
+    margin-top: 50px;
+    font-size: 24px;
+    font-weight: 400;
+    @media (min-width: $screen-768) {
+      max-width: 432px;
+      margin-top: 0;
+    }
+    @media (min-width: $screen-1280) {
+      max-width: 697px;
+    }
+    @media (min-width: $screen-1280) {
+      font-size: 35px;
+    }
+    span{
+      display: block;
+    }
+  }
+
+  &__title-strong{
+    font-weight: 700;
+    font-size: 29px;
+    line-height: 34px;
+    @media (min-width: $screen-1280) {
+      display: block;
+      font-size: 47px;
+      line-height: 48px;
+    }
+    &--green{
+      color: $color-green;
+      line-height: 42px;
+      font-size: 28px;
+      @media (min-width: $screen-1280) {
+        display: inline-block;
+        line-height: 74px;
+        font-size: 47px;
+      }
+    }
+  }
+
+  &__description{
+    display: none;
+    line-height: 22px;
+    @media (min-width: $screen-768) {
+      display: block;
+      max-width: 406px;
+      margin-top: 20px;
+    }
+    @media (min-width: $screen-1280) {
+      max-width: 662px;
+    }
+    @media (min-width: $screen-1280) {
+      margin-top: 52px;
+      max-width: 667px;
+      line-height: 28px;
+    }
+  }
+}
+
+.theme-black{
+  .main-banner{
+    @media (min-width: $screen-768) {
+      background-color: $black;
+    }
+
+    &__wrapper-decor{
+      background-color: $black;
+      @media (min-width: $screen-768) {
+        background-color: transparent;
+      }
+      
+      &:after{
+        background-image: url('../img/index/main-banner-black.png');
+      }
+    }
+  }
+}
