@@ -269,7 +269,7 @@
 
 .theme-black {
   .about-us {
-    background-color: #0b0b0b;
+    background-color: #0c0a0a;
 
     &__item{
 
@@ -294,6 +294,7 @@
     }
 
     &__item-link {
+      background-color: transparent;
       @media (min-width: $screen-768) {
         background-color: transparent;
       }
