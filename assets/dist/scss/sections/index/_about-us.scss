@@ -1,7 +1,308 @@
 @import "../../helper/variables";
 @import "../../helper/mixins";
 
-.about-us{
-  $block-name:                &; // #{$block-name}__element
+.about-us {
+  $block-name: &; // #{$block-name}__element
 
+  margin-top: 32px;
+  padding: 81px 0 155px;
+  background-color: #2b2e2d;
+  @media (min-width: $screen-768) {
+    margin-top: 0;
+    padding: 50px 0 35px;
+    background-color: transparent;
+  }
+  @media (min-width: $screen-1400) {
+    padding: 94px 0 72px;
+  }
+
+  &__inner {
+    @include container;
+  }
+
+  &__title {
+    @include hide-text;
+  }
+
+  &__carousel {
+    @include ul-reset;
+    position: relative;
+    @media (min-width: $screen-768) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 23px;
+    }
+  }
+
+  &__item {
+    @media (min-width: $screen-768) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+    }
+    @media (min-width: $screen-768) {
+      height: 250px;
+    }
+    @media (min-width: $screen-1280) {
+      height: 388px;
+    }
+    &:nth-child(2){
+      #{$block-name}__item-title{
+        @media (min-width: $screen-768) {
+          max-width: 126px;
+        }
+        @media (min-width: $screen-1024) {
+          max-width: 180px;
+        }
+        @media (min-width: $screen-1280) {
+          max-width: 297px;
+        }
+      }
+    }
+  }
+
+  &__item-link {
+    display: flex;
+    flex-direction: column;
+    background-color: #2b2e2d;
+    @media (min-width: $screen-768) {
+      position: relative;
+      overflow: hidden;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      padding: 0 45px;
+    }
+    @media (min-width: $screen-1400) {
+      padding-right: 0;
+    }
+    &:hover,
+    &:focus {
+      @media (min-width: $screen-768) {
+        background-color: #514ed6;
+      }
+      #{$block-name}__description{
+        @media (min-width: $screen-768) {
+          bottom: 15px;
+          opacity: 1;
+          z-index: 0;
+          width: auto;
+          height: auto;
+          clip: auto;
+          overflow: visible;
+        }
+        @media (min-width: $screen-1024) {
+          bottom: 40px;
+        }
+        @media (min-width: $screen-1280) {
+          bottom: 63px;
+        }
+        @media (min-width: $screen-1400) {
+          left: 33px;
+        }
+      }
+      #{$block-name}__item-title{
+        @media (min-width: $screen-768) {
+          top: 10%;
+          transform: translateY(0);
+        }
+        @media (min-width: $screen-1024) {
+          top: 40px;
+        }
+        @media (min-width: $screen-1280) {
+          top: 63px;
+        }
+        @media (min-width: $screen-1400) {
+          left: 31px;
+        }
+      }
+      #{$block-name}__wrapper-img{
+        @media (min-width: $screen-768) {
+          left: auto;
+          right: -20px;
+        }
+        @media (min-width: $screen-1400) {
+          right: -56px;
+        }
+      }
+      #{$block-name}__icon{
+        @media (min-width: $screen-768) {
+          width: 120px;
+        }
+        @media (min-width: $screen-1024) {
+          width: 160px;
+        }
+        @media (min-width: $screen-1280) {
+          width: 230px;
+        }
+        @media (min-width: $screen-1400) {
+          width: 292px;
+        }
+      }
+      #{$block-name}__content{
+        @media (min-width: $screen-768) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__wrapper-img {
+    transition: $transition-time;
+    @media (min-width: $screen-768) {
+      flex-shrink: 0;
+      position: absolute;
+      left: 35px;
+      transition: $transition-time;
+      background-color: transparent;
+    }
+    @media (min-width: $screen-1400) {
+      left: 83px;
+    }
+  }
+
+  &__icon {
+    width: 130px;
+    margin: 0 auto;
+    transition: $transition-time;
+    @media (min-width: $screen-768) {
+      width: 70px;
+    }
+    @media (min-width: $screen-1024) {
+      width: 100px;
+    }
+    @media (min-width: $screen-1280) {
+      width: 157px;
+    }
+  }
+
+  &__content {
+    background-color: transparent;
+    @media (min-width: $screen-768) {
+      position: relative;
+      width: 56%;
+      height: 100%;
+      margin-left: auto;
+      transition: $transition-time;
+    }
+    @media (min-width: $screen-1280) {
+      width: 61%;
+    }
+  }
+
+  &__item-title {
+    max-width: 290px;
+    margin: 0 auto;
+    margin-top: 38px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    color: $color-white-white-theme;
+    transition: $transition-time;
+    @media (min-width: $screen-768) {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      max-width: 100px;
+      margin: 0;
+      text-align: left;
+      font-size: 14px;
+      line-height: 14px;
+    }
+    @media (min-width: $screen-1024) {
+      max-width: 142px;
+      font-size: 20px;
+      line-height: 20px;
+    }
+    @media (min-width: $screen-1280) {
+      max-width: 218px;
+      font-size: 30px;
+      line-height: 30px;
+    }
+    @media (min-width: $screen-1400) {
+      transform: translateY(-38%);
+      left: 60px;
+    }
+  }
+
+  &__description {
+    opacity: 0;
+    z-index: -1;
+    max-width: 180px;
+    margin-top: 9px;
+    color: #a7a5f6;
+    font-size: 10px;
+    line-height: 18px;
+    background-color: transparent;
+    transition: opacity .3s;
+    transition-delay: .1s;
+    @include hide-text;
+    @media (min-width: $screen-768) {
+      position: absolute;
+    }
+    @media (min-width: $screen-1280) {
+      max-width: 285px;
+      font-size: 16px;
+      line-height: 30px;
+    }
+  }
+
+  &__arrow-carousel {
+    position: absolute;
+    bottom: -67px;
+    font-size: 24px;
+
+    &--next {
+      right: 32%;
+    }
+
+    &--prev {
+      left: 32%;
+    }
+  }
 }
+
+.theme-black {
+  .about-us {
+    background-color: #0b0b0b;
+
+    &__item{
+
+      @media (min-width: $screen-768) {
+        position: relative;
+      }
+
+      &:first-child{
+        &:after{
+          @include pseudo;
+          display: none;
+          bottom: -12px;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background-color: #cccccc;
+          @media (min-width: $screen-768) {
+            display: block;
+          }
+        }
+      }
+    }
+
+    &__item-link {
+      @media (min-width: $screen-768) {
+        background-color: transparent;
+      }
+      &:hover,
+      &:focus{
+        @media (min-width: $screen-768) {
+          background-color: #514ed6;
+        }
+      }
+    }
+  }
+}
+

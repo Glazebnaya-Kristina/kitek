@@ -40,7 +40,7 @@ module.exports = function (grunt) {
          assets: {
             files: {
                'markup/js/jquery.min.js': ['assets/dist/js/plugin/jquery.js'],
-               'markup/js/slick.min.js': ['assets/dist/js/plugin/slick.min.js'],
+               'markup/js/slick.min.js': ['assets/dist/js/plugin/slick.js'],
                'markup/js/jcf.scrollable.min.js': ['assets/dist/js/plugin/jcf.scrollable.js'],
                'markup/js/jcf.select.min.js': ['assets/dist/js/plugin/jcf.select.js'],
                'markup/js/jcf.file.min.js': ['assets/dist/js/plugin/jcf.file.js'],
@@ -48,6 +48,9 @@ module.exports = function (grunt) {
                'markup/js/jcf.radio.min.js': ['assets/dist/js/plugin/jcf.radio.js'],
                'markup/js/jcf.min.js': ['assets/dist/js/plugin/jcf.js'],
                'markup/js/script.min.js': ['assets/dist/js/script.js'],
+
+
+
                'markup/js/home.min.js': ['assets/dist/js/home.js']
             }
          }
