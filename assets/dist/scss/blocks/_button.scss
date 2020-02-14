@@ -25,6 +25,47 @@
 
   &--border{
     border-radius: 50px;
-    border: 2px solid $color-blue;
+    //border: 2px solid $color-blue;
+    border: 2px solid;
+  }
+
+  &--border-blue{
+    border-color: $color-blue;
+    &:hover,
+    &:focus{
+      background-color: $color-blue;
+      color: $color-white-white-theme;
+    }
+  }
+
+  &--border-white{
+    border-color: $white;
+    &:hover,
+    &:focus{
+      background-color: $white;
+      color: $color-blue;
+    }
+  }
+
+  &--small{
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &--icon{
+    position: relative;
+    padding-right: 38px;
+    padding-left: 12px;
+    @media (min-width: $screen-1400) {
+      padding-left: 16px;
+    }
+    &:after{
+      @include pseudo;
+      font-family: 'fontello';
+      content: '\e804';
+      right: 13px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 }

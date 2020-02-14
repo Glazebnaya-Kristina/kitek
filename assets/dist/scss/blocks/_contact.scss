@@ -1,0 +1,33 @@
+.contact{
+  @include ul-reset;
+
+  &__item{
+    display: flex;
+    align-items: flex-end;
+    &:not(:first-child){
+      margin-top: 34px;
+    }
+  }
+
+  &__item-info{
+    display: flex;
+    flex-direction: column;
+    margin-left: 23px;
+    line-height: 23px;
+  }
+
+  i{
+    color: $color-green;
+    font-size: 21px;
+  }
+
+  &__item-description{
+    color: $color-green;
+    font-size: 16px;
+  }
+
+  &__link{
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
