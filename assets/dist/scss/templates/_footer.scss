@@ -140,3 +140,26 @@
     }
   }
 }
+
+.theme-black{
+  .footer{
+    background-color: transparent;
+
+    &:before{
+      background-image: url('../img/footer2-bl.png');
+    }
+
+    &__copyright{
+      background-color: transparent;
+      border-top-color: #2d2d2d;
+    }
+
+    &__bottom{
+      &:after{
+        @media (min-width: $screen-1024) {
+          background-color: #272727;
+        }
+      }
+    }
+  }
+}
