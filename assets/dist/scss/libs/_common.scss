@@ -104,6 +104,10 @@ body {
   @include hide-text;
 }
 
+::selection{
+  background-color: rgba($color-green, .5);
+}
+
 [tabindex='-1']:focus {
   outline: 0 !important;
 }
