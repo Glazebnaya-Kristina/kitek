@@ -26,12 +26,27 @@
       &:hover,
       &:focus{
         outline: none;
-        //color: $color-gold;
       }
     }
     span{
       color: #979797;
       font-weight: 400;
+    }
+  }
+}
+
+.theme-black{
+  .breadcrumbs{
+    li{
+      &:after{
+        background-color: $color-white-white-theme;
+      }
+      a{
+        color: $color-white-white-theme;
+      }
+      span{
+        color: #979797;
+      }
     }
   }
 }

@@ -13,6 +13,7 @@
 @import "sections/index/about-us";
 @import "sections/index/advantages";
 @import "sections/about-us/description";
+@import "sections/about-us/team";
 // стили шаблонов
 @import "templates/header";
 @import "templates/footer";
@@ -21,5 +22,9 @@
 .page{
   &__main{
     border-top: 1px solid #d1d1d1;
+  }
+
+  .about-us{
+    margin-top: 0;
   }
 }

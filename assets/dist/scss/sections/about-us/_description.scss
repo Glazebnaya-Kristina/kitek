@@ -1,5 +1,5 @@
 .description{
-  padding-bottom: 31px;
+  padding-bottom: 64px;
   @media (min-width: $screen-1280) {
     position: relative;
   }
@@ -101,4 +101,8 @@
   //.morelink {
   //  display: block;
   //}
+}
+
+.theme-black{
+  .description{}
 }

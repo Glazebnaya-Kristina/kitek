@@ -30,6 +30,25 @@ $(document).ready(function () {
     ]
   });
 
+  $('.team__carousel').slick({
+    mobileFirst: true,
+    prevArrow: '<button type="button" class="arrow-carousel arrow-carousel--oval arrow-carousel--prev team__arrow-carousel team__arrow-carousel--prev"><i class="icon-arrow"></i></button>',
+    nextArrow: '<button type="button" class="arrow-carousel arrow-carousel--oval arrow-carousel--next team__arrow-carousel team__arrow-carousel--next"><i class="icon-arrow"></i></button>',
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        },
+      },
+      {
+        breakpoint: 1023,
+        settings: "unslick"
+      },
+    ]
+  });
+
   $(".js-more").click(function() {
 
     var elem = $(".js-more span").text();
