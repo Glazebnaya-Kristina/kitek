@@ -1,0 +1,14 @@
+.attached{
+  &__title{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    i{
+      margin-right: 11px;
+      color: $color-green;
+      font-size: 18px;
+    }
+  }
+}

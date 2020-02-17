@@ -204,6 +204,64 @@
     </div>
     <p class="advantages__decor"></p>
   </section>
+
+  <!-- Секция Преимущества -->
+  <section class="contacts">
+    <div class="contacts__inner">
+      <h2 class="title">Contact <strong class="title__strong">us</strong></h2>
+      <form action="#" class="form contacts__form">
+        <ul class="form__list contacts__list">
+          <li class="form__item contacts__item">
+            <label class="label">
+              <span class="label__name">Name</span>
+              <input class="input" type="text" placeholder="Your Name">
+              <span class="text-error">Error...</span>
+            </label>
+          </li>
+          <li class="form__item contacts__item">
+            <label class="label">
+              <span class="label__name">E-mail</span>
+              <input class="input" type="email" placeholder="E-mail">
+              <span class="text-error">Error...</span>
+            </label>
+          </li>
+          <li class="form__item contacts__item">
+            <label class="label">
+              <span class="label__name">Phone</span>
+              <input class="input" type="tel" placeholder="Phone">
+              <span class="text-error">Error...</span>
+            </label>
+          </li>
+          <li class="form__item contacts__item">
+            <label class="label">
+              <span class="label__name">Message</span>
+              <textarea class="input input--textarea contacts__textarea" type="text" placeholder="Message"></textarea>
+              <span class="text-error">Error...</span>
+            </label>
+          </li>
+        </ul>
+
+        <div class="attached contacts__attached">
+          <strong class="attached__title"><i class="icon-link"></i>Attached Files</strong>
+<!--          <input type="file" multiple data-jcf='{ "buttonText": "Attach Files"}'>-->
+<!--          <input type="file" data-jcf='{"buttonText": "Custom button", "placeholderText": ""}'>-->
+
+<!--          <input type="file" multiple>-->
+<!--          <div class="files" id="files">-->
+<!--            <div class="file-loading">-->
+<!--&lt;!&ndash;              <input id="file-1" type="file" name="file-1[]" multiple>&ndash;&gt;-->
+<!--&lt;!&ndash;              fileinput&ndash;&gt;-->
+<!--            </div>-->
+<!--          </div>-->
+
+          <div class="fileinput">
+            <input id="file-1" type="file" name="file-1[]" multiple>
+          </div>
+        </div>
+        <button class="button button--border button--border-blue contacts__button" type="button">Send</button>
+      </form>
+    </div>
+  </section>
 </main>
 
 <!-- build:section layout.footer-->
@@ -269,6 +327,9 @@
 
 <script src="../js/jquery.min.js"></script>
 <script src="../js/slick.min.js"></script>
+<script src="../js/jcf.min.js"></script>
+<!--<script src="../js/jcf.file.min.js"></script>-->
+<script src="../js/fileinput.min.js"></script>
 <script src="../js/script.min.js"></script>
 <script src="../js/about-us.min.js"></script>
 

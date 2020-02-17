@@ -9,11 +9,15 @@
 // поключения библиотек
 @import "helper/container-mixins";
 @import "libs/slick";
+@import "libs/jsf-file";
+@import "libs/fileinput";
+
 // поключения секций
 @import "sections/index/about-us";
 @import "sections/index/advantages";
 @import "sections/about-us/description";
 @import "sections/about-us/team";
+@import "sections/about-us/contacts";
 // стили шаблонов
 @import "templates/header";
 @import "templates/footer";

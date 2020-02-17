@@ -1,6 +1,7 @@
 /* file */
 .jcf-file {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   white-space: nowrap;
   position: relative;
   overflow: hidden;
@@ -29,13 +30,12 @@
   white-space: nowrap;
   vertical-align: top;
   overflow: hidden;
-  border: 1px solid #777;
-  padding: 0 8px;
-  font-size: 13px;
-  line-height: 28px;
-  height: 28px;
-  width: 125px;
-  display: none;
+  //padding: 0 8px;
+  font-size: 16px;
+  font-weight: 400;
+  //line-height: 28px;
+  //height: 28px;
+  //width: 125px;
 }
 
 .jcf-button-content-my{
@@ -43,16 +43,27 @@
   display: inline-block;
   vertical-align: top;
   white-space: nowrap;
-  i{
-    font-size: 20px;
-    color: $color-grey-light;
-  }
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-decoration: underline;
+  color: $color-green;
+  //i{
+  //  font-size: 20px;
+  //  color: $color-grey-light;
+  //}
 
 }
 .jcf-file .jcf-upload-button {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  margin-top: 64px;
   vertical-align: top;
   white-space: nowrap;
   overflow: hidden;
-  cursor: pointer;
+  //border: 1px solid #777;
+  //margin: 0 0 0 -1px;
+  //padding: 0 10px;
+  //line-height: 28px;
+  //height: 28px;
 }
