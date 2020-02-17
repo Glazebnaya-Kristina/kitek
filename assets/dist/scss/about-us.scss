@@ -26,5 +26,24 @@
 
   .about-us{
     margin-top: 0;
+    background-color: transparent;
+
+    &__item-link{
+      @media (min-width: $screen-xs) and (max-width: $screen-768){
+        background-color: transparent;
+      }
+    }
+    &__item-title{
+      @media (min-width: $screen-xs) and (max-width: $screen-768){
+        color: $color-black-white-theme;
+      }
+    }
+
+    &__arrow-carousel{
+      color: $color-black-white-theme;
+      &:after{
+        border-color: $color-black-white-theme;
+      }
+    }
   }
 }
