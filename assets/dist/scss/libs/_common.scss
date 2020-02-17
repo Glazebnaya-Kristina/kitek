@@ -50,18 +50,10 @@ body {
   @media (min-width: $screen-1400) {
     background-color:  #0b0b0b;
   }
-  //:root {
-  //  background-color: #fefefe;
-  //  filter: invert(100%);
-  //}
-  //
-  //img:not([src*=".svg"]), video {
-  //  filter: invert(100%);
-  //}
-  //
-  //img{
-  //  filter: invert(0);
-  //}
+}
+
+.theme-white{
+  color: $color-black-white-theme;
 }
 
 .black-theme{

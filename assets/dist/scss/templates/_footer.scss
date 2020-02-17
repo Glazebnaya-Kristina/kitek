@@ -139,6 +139,13 @@
       margin-top: 76px;
     }
   }
+  
+  &__navigation{
+    display: none;
+    @media (min-width: $screen-1024) {
+      display: block;
+    }
+  }
 }
 
 .theme-black{

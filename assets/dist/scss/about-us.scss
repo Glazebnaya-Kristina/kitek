@@ -1,0 +1,25 @@
+//about-us
+@import "helper/variables";
+@import "helper/container-mixins";
+@import "helper/mixins";
+@import "helper/animations";
+
+// Подключения блоков
+@import "blocks/nav-section";
+// поключения библиотек
+@import "helper/container-mixins";
+@import "libs/slick";
+// поключения секций
+@import "sections/index/about-us";
+@import "sections/index/advantages";
+@import "sections/about-us/description";
+// стили шаблонов
+@import "templates/header";
+@import "templates/footer";
+
+
+.page{
+  &__main{
+    border-top: 1px solid #d1d1d1;
+  }
+}

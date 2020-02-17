@@ -1,0 +1,11 @@
+.breadcrumbs-block {
+  margin-top: 19px;
+  margin-bottom: 35px;
+  @media (min-width: $screen-1400) {
+    margin-top: 33px;
+    margin-bottom: 26px;
+  }
+  &__inner {
+    @include container;
+  }
+}

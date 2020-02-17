@@ -1,0 +1,104 @@
+.description{
+  padding-bottom: 31px;
+  @media (min-width: $screen-1280) {
+    position: relative;
+  }
+  @media (min-width: $screen-1400) {
+    padding-bottom: 88px;
+  }
+  
+  &:after,
+  &:before{
+    @include pseudo;
+    display: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    @media (min-width: $screen-1280) {
+      display: block;
+    }
+  }
+  &:after{
+    left: 0;
+    bottom: 0;
+    width: 170px;
+    height: 380px;
+    background-image: url('../img/about-us/ball-left.png');
+    background-position: left bottom;
+    @media (min-width: $screen-1400) {
+      width: 238px;
+    }
+    @media (min-width: $screen-1600) {
+      width: 335px;
+      height: 401px;
+    }
+  }
+  &:before{
+    right: 0;
+    top: -200px;
+    width: 89px;
+    height: 380px;
+    background-image: url('../img/about-us/ball-right.png');
+    background-position: right top;
+    @media (min-width: $screen-1400) {
+      width: 238px;
+    }
+    @media (min-width: $screen-1600) {
+      width: 208px;
+      height: 540px;
+    }
+  }
+  &__inner{
+    @include container;
+    @media (min-width: $screen-1280) {
+      width: 896px !important;
+    }
+  }
+
+  &__content{
+    margin-top: 35px;
+    @media (min-width: $screen-1400) {
+      margin-top: 77px;
+    }
+    p{
+      font-size: 18px;
+      line-height: 30px;
+      &:not(:first-child){
+        margin-top: 30px;
+        display: none;
+        @media (min-width: $screen-1024) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__icon{
+    margin-left: 21px;
+  }
+
+  &__button{
+    margin-top: 34px;
+    outline: none;
+    @media (min-width: $screen-1024) {
+      display: none;
+    }
+  }
+
+  .js-more{
+    &--active{
+      .description__icon{
+        &:before{
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  }
+
+  //.morecontent span {
+  //  display: none;
+  //}
+  //.morelink {
+  //  display: block;
+  //}
+}
