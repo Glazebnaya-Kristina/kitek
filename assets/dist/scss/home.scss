@@ -1,5 +1,10 @@
+@import "helper/variables";
+@import "helper/container-mixins";
+@import "helper/mixins";
+@import "helper/animations";
+
 // Подключения блоков
-//@import "blocks/time-flag";
+@import "blocks/nav-section";
 // поключения библиотек
 @import "helper/container-mixins";
 @import "libs/slick";
@@ -14,8 +19,6 @@
 @import "templates/footer";
 
 
-
-
-.row-swish{
-  margin-top: 100px;
+section{
+  position: relative;
 }

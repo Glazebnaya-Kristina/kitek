@@ -60,6 +60,68 @@ $(document).ready(function () {
       },
     ]
   });
+
+  var navSection = '.nav-section';
+
+  function onScroll(){
+    $(navSection + ' a').each(function(){
+      var anchor      = $(this).attr('href');
+      var scrollTop   = $(document).scrollTop();
+      var positionTop = $(anchor).offset().top;
+      var outerHeight = $(anchor).outerHeight();
+
+      if ((positionTop <= scrollTop) && (positionTop + outerHeight > scrollTop)) {
+        $(navSection + ' a.nav-section__link--active').removeClass('nav-section__link--active');
+        $(this).addClass('nav-section__link--active');
+      } else {
+        $(this).removeClass('nav-section__link--active');
+      }
+    });
+  }
+
+  $(document).on('scroll', onScroll);
+
+  //якорные ссылки
+  var $anchor = $('.js-anchor');
+
+  if ($anchor.length) {
+    $anchor.on('click', function (event) {
+
+      event.preventDefault();
+      var $that = $(this), hb = $('body, html');
+
+      if ($that.is('button')) {
+        hb.stop().animate({scrollTop: $('.' + $that.data('id')).offset().top}, 1000, 'swing');
+      } else if ($that.is('a')) {
+        hb.stop().animate({scrollTop: $('.' + $that.attr('href').replace('#', '')).offset().top + 2 + 'px'}, 1000, 'swing');
+      }
+    });
+  }
+
+  if ( $('.header').length) {
+    var cardsSectionOffset = $('.header').offset().top;
+    $(window).scroll(function () {
+      var scroll = $(this).scrollTop();
+      if (scroll == cardsSectionOffset) {
+        $('.nav-section li:first-child').children().addClass('nav-section__link--active')
+      }
+    });
+  }
+
+  if ( $('.case-studies').length) {
+    var caseStudies = $('.case-studies').offset().top;
+    $(window).scroll(function () {
+      var scroll = $(this).scrollTop();
+      if (scroll >= caseStudies) {
+        $('.nav-section').css({"position": "absolute"});
+        console.log(1)
+      } else {
+        $('.nav-section').attr('style', '');
+        console.log(2)
+      }
+    });
+  }
+
 });
 
 

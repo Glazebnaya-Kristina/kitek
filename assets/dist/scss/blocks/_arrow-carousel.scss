@@ -5,9 +5,14 @@
   border: none;
   background-color: transparent;
   color: $color-white-white-theme;
+  transition: $transition-time;
   &:focus{
     outline: none;
   }
+  &:hover{
+    color: $color-green;
+  }
+
 
   &--prev{
     i{
@@ -18,6 +23,11 @@
   }
 
   &--oval{
+    &:hover{
+      &:after{
+        border-color: $color-green;
+      }
+    }
     &:after{
       @include pseudo;
       top: 50%;
@@ -27,6 +37,7 @@
       height: 47px;
       border: 1px solid $color-white-white-theme;
       border-radius: 50%;
+      transition: $transition-time;
     }
   }
 }
