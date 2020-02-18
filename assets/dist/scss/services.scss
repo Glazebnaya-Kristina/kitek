@@ -1,0 +1,70 @@
+//services
+@import "helper/variables";
+@import "helper/container-mixins";
+@import "helper/mixins";
+@import "helper/animations";
+
+// поключения библиотек
+//@import "libs/slick";
+// поключения секций
+@import "sections/index/about-us";
+// стили шаблонов
+@import "templates/header";
+@import "templates/footer";
+
+
+.page{
+  &__main{
+    background-color: #2b2e2d;
+    border-top: 1px solid #d1d1d1;
+    @media (min-width: $screen-768) {
+      background-color: transparent;
+    }
+  }
+
+  .breadcrumbs{
+    li{
+      &:after{
+        @media (max-width: 767px) {
+          background-color: $color-white-white-theme;
+        }
+      }
+      a{
+        @media (max-width: 767px) {
+          color: $color-white-white-theme;
+        }
+      }
+      span{
+        @media (max-width: 767px) {
+          color: #979797;
+        }
+      }
+    }
+  }
+}
+
+.services{
+  margin-top: 0;
+  padding-top: 20px;
+  padding-bottom: 74px;
+  @media (min-width: $screen-768) {
+    padding-top: 0;
+  }
+  @media (min-width: $screen-1400) {
+    padding-bottom: 88px;
+  }
+  &__title{
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  .about-us__carousel{
+    @media (min-width: $screen-768) {
+      margin-top: 50px;
+    }
+    @media (min-width: $screen-1400) {
+      margin-top: 86px;
+    }
+  }
+}

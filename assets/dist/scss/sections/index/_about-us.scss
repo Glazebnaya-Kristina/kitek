@@ -60,6 +60,20 @@
         }
       }
     }
+
+    &--border{
+      &:not(:first-child){
+        @media (max-width: 767px) {
+          margin-top: 50px;
+        }
+      }
+      &:not(:last-child){
+        @media (max-width: 767px) {
+          padding-bottom: 64px;
+          border-bottom: 1px solid #c9c8d3;
+        }
+      }
+    }
   }
 
   &__item-link {
@@ -133,7 +147,7 @@
           width: 230px;
         }
         @media (min-width: $screen-1400) {
-          right: -12px;
+          right: -40px;
           width: 292px;
         }
       }
@@ -163,6 +177,12 @@
     }
     @media (min-width: $screen-1400) {
       left: 83px;
+    }
+
+    &--big{
+      @media (max-width: 767px) {
+        width: 202px;
+      }
     }
   }
 
