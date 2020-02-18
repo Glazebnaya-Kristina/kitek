@@ -68,3 +68,10 @@
     }
   }
 }
+
+.theme-black{
+  background-color: $color-black-white-theme;
+  .page__main{
+    background-color: transparent;
+  }
+}
