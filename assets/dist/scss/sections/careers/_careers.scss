@@ -1,4 +1,4 @@
-.careers{
+.careers {
   position: relative;
   overflow: hidden;
   padding-bottom: 74px;
@@ -7,7 +7,7 @@
     padding-bottom: 79px;
   }
 
-  &:before{
+  &:before {
     @include pseudo;
     display: none;
     background-repeat: no-repeat;
@@ -17,8 +17,8 @@
       display: block;
     }
   }
-  
-  &:before{
+
+  &:before {
     top: 54px;
     left: 0;
     width: 364px;
@@ -30,10 +30,11 @@
     }
   }
 
-  &__inner{
+  &__inner {
     @include container;
     position: relative;
-    &:after{
+
+    &:after {
       @include pseudo;
       top: 130px;
       right: -120px;
@@ -82,7 +83,7 @@
     }
   }
 
-  .slick-slide{
+  .slick-slide {
     @media (min-width: $screen-768) {
       margin: 0 15px;
     }
@@ -100,14 +101,14 @@
     }
   }
 
-  &__item-img{
+  &__item-img {
     display: block;
     width: 80px;
     height: 80px;
     margin: 0 auto;
   }
 
-  &__item-title{
+  &__item-title {
     margin: 0;
     margin-top: 40px;
     font-size: 24px;
@@ -121,7 +122,7 @@
     }
   }
 
-  &__item-button{
+  &__item-button {
     display: flex;
     margin: 0 auto;
     margin-top: 55px;
@@ -136,7 +137,7 @@
       color: #2d2d2d;
     }
 
-    &:after{
+    &:after {
       @media (min-width: $screen-768) {
         border-color: #2d2d2d;
       }
@@ -152,7 +153,7 @@
     }
   }
 
-  &__content{
+  &__content {
     margin-top: 73px;
     @media (min-width: $screen-768) {
       margin-top: 20px;
@@ -165,9 +166,11 @@
     @media (min-width: $screen-1400) {
       margin-top: 91px;
     }
-    p{
+
+    p {
       line-height: 30px;
-      &:not(:first-child){
+
+      &:not(:first-child) {
         margin-top: 22px;
         display: none;
         @media (min-width: $screen-1024) {
@@ -177,11 +180,11 @@
     }
   }
 
-  &__content-icon{
+  &__content-icon {
     margin-left: 21px;
   }
 
-  &__content-button{
+  &__content-button {
     margin-top: 34px;
     outline: none;
     @media (min-width: $screen-1024) {
@@ -189,10 +192,10 @@
     }
   }
 
-  .js-more{
-    &--active{
-      .description__icon{
-        &:before{
+  .js-more {
+    &--active {
+      .description__icon {
+        &:before {
           transform: rotate(-90deg);
         }
       }
@@ -203,68 +206,34 @@
 
 .theme-black {
   .careers {
-    //background-color: #0c0a0a;
+    &:before{
+      background-image: url('../img/careers/career-bl1.png');
+    }
+    &__inner{
+      &:after{
+        background-image: url('../img/careers/career-bl2.png');
+      }
+    }
+    &__carousel {
+      background-color: $black;
+      @media (min-width: $screen-768) {
+        background-color: transparent;
+      }
+    }
 
-    //&__carousel{
-    //  @media (min-width: $screen-1024) {
-    //    //z-index: 1;
-    //    //grid-gap: 0;
-    //  }
-    //}
+    &__item{
+      @media (min-width: $screen-768) {
+        background-color: $black;
+      }
+    }
 
-    //
-    //&__arrow-carousel{
-    //  &:after{
-    //    border-color: #2d2d2d;
-    //  }
-    //}
-    //
-    //&__title{
-    //  color: $color-white-white-theme;
-    //}
-
-    //&__item{
-    //  @media (min-width: $screen-1024) {
-    //    position: relative;
-    //    background-color: transparent;
-    //  }
-    //  &:hover,
-    //  &:focus {
-    //    @media (min-width: $screen-1024) {
-    //      background-color: #514ed6;
-    //    }
-    //    .our-process__item-number{
-    //      @media (min-width: $screen-1024) {
-    //        color: $color-white-white-theme;
-    //      }
-    //    }
-    //    + li{
-    //      &:before{
-    //        display: none;
-    //      }
-    //    }
-    //  }
-    //  &:not(:first-child){
-    //    &:before{
-    //      @include pseudo;
-    //      z-index: -1;
-    //      left: 0;
-    //      top: 0;
-    //      display: none;
-    //      width: 2px;
-    //      height: 100%;
-    //      background-color: #cccccc;
-    //      @media (min-width: $screen-1024) {
-    //        display: block;
-    //      }
-    //    }
-    //    &:hover,
-    //    &:focus{
-    //      &:before{
-    //        display: none;
-    //      }
-    //    }
-    //  }
-    //}
+    &__arrow-carousel {
+      @media (min-width: $screen-768) {
+        color: $color-white-white-theme;
+      }
+      &:after {
+        border-color: #2d2d2d;
+      }
+    }
   }
 }
