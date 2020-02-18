@@ -1,0 +1,26 @@
+//careers
+@import "helper/variables";
+@import "helper/container-mixins";
+@import "helper/mixins";
+@import "helper/animations";
+
+// Подключения блоков
+
+// поключения библиотек
+@import "helper/container-mixins";
+@import "libs/slick";
+
+// поключения секций
+@import "sections/careers/careers";
+
+// стили шаблонов
+@import "templates/header";
+@import "templates/footer";
+
+
+.page{
+  &__main{
+    border-top: 1px solid #d1d1d1;
+  }
+}
+
