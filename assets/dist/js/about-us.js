@@ -68,7 +68,6 @@ $(document).ready(function () {
   jcf.replaceAll();
 
 
-
   $("#file-1").fileinput({
     uploadUrl: "/ file-upload-batch / 1",
     showCaption: false,
