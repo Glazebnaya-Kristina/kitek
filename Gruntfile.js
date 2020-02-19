@@ -58,6 +58,7 @@ module.exports = function (grunt) {
                'markup/js/careers.min.js': ['assets/dist/js/careers.js'],
                'markup/js/services.min.js': ['assets/dist/js/services.js'],
                'markup/js/cases.min.js': ['assets/dist/js/cases.js'],
+               'markup/js/case-study.min.js': ['assets/dist/js/case-study.js'],
             }
          }
       },

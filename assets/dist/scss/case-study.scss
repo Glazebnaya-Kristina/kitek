@@ -1,0 +1,37 @@
+//case-study
+@import "helper/variables";
+@import "helper/container-mixins";
+@import "helper/mixins";
+@import "helper/animations";
+
+// Подключения блоков
+
+// поключения библиотек
+@import "libs/slick";
+// поключения секций
+@import "sections/case-study/case-study";
+// стили шаблонов
+@import "templates/header";
+@import "templates/footer";
+
+
+
+.page{
+  &__main{
+    border-top: 1px solid #d1d1d1;
+  }
+}
+
+.theme-black{
+  //background-color: $color-black-white-theme;
+  .page__main{
+    border-top: 1px solid #2b2b2c;
+  }
+
+  .case-study{
+    &:after{
+      background-image: none;
+      background-color: $black;
+    }
+  }
+}
