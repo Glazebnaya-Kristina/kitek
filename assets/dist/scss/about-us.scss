@@ -56,4 +56,12 @@
   .page__main{
     border-top: 1px solid #2b2b2c;
   }
+
+  .about-us{
+    &__item-title{
+      @media (min-width: $screen-xs) and (max-width: $screen-768){
+        color: $color-white-white-theme;
+      }
+    }
+  }
 }

@@ -96,6 +96,7 @@
     position: relative;
     height: 203px;
     overflow: hidden;
+    background-color: #1e1e20;
     @media (min-width: $screen-768) {
       height: 255px;
     }
@@ -105,8 +106,37 @@
     @media (min-width: $screen-1400) {
       height: 553px;
     }
-    &--black{
-      background-color: #1e1e20;
+    &:after{
+      top: 8%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 83%;
+      height: 128%;
+      border-radius: 50%;
+      background-color: #29292b;
+      @media (min-width: $screen-1400) {
+        width: 89%;
+        height: 114%;
+      }
+    }
+    //&--black{
+    //  background-color: #1e1e20;
+    //  &:after{
+    //    top: 8%;
+    //    left: 50%;
+    //    transform: translateX(-50%);
+    //    width: 83%;
+    //    height: 128%;
+    //    border-radius: 50%;
+    //    background-color: #29292b;
+    //    @media (min-width: $screen-1400) {
+    //      width: 89%;
+    //      height: 114%;
+    //    }
+    //  }
+    //}
+    &--green{
+      background-color: #9ec91c;
       &:after{
         top: 8%;
         left: 50%;
@@ -114,7 +144,44 @@
         width: 83%;
         height: 128%;
         border-radius: 50%;
-        background-color: #29292b;
+        background-color: #b1db32;
+        @media (min-width: $screen-1400) {
+          width: 89%;
+          height: 114%;
+        }
+      }
+    }
+
+    &--yellow{
+      background-color: #f5d01f;
+      &:after{
+        top: 8%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 83%;
+        height: 128%;
+        border-radius: 50%;
+        background-color: #fbde33;
+        @media (min-width: $screen-1400) {
+          width: 89%;
+          height: 114%;
+        }
+      }
+    }
+    &--blue{
+      background-color: #7594ea;
+      &:after{
+        top: 8%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 83%;
+        height: 128%;
+        border-radius: 50%;
+        background-color: #8fa8ed;
+        @media (min-width: $screen-1400) {
+          width: 89%;
+          height: 114%;
+        }
       }
     }
     &:after{

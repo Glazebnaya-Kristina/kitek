@@ -6,6 +6,7 @@
   background-color: transparent;
   color: $color-white-white-theme;
   transition: $transition-time;
+  cursor: pointer;
   &:focus{
     outline: none;
   }
