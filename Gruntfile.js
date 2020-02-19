@@ -57,6 +57,7 @@ module.exports = function (grunt) {
                'markup/js/get-quote.min.js': ['assets/dist/js/get-quote.js'],
                'markup/js/careers.min.js': ['assets/dist/js/careers.js'],
                'markup/js/services.min.js': ['assets/dist/js/services.js'],
+               'markup/js/cases.min.js': ['assets/dist/js/cases.js'],
             }
          }
       },
