@@ -294,3 +294,28 @@
     }
   }
 }
+
+
+.theme-black{
+  .case-study{
+    &__arrow-carousel{
+      color: $color-white-white-theme;
+    }
+  }
+
+  .case-study__top{
+    position: relative;
+    &:after{
+      @include pseudo;
+      top: -44px;
+      left: -15px;
+      z-index: -1;
+      width: 110%;
+      height: 110%;
+      background-color: $black;
+      @media (min-width: $screen-768) {
+        display: none;
+      }
+    }
+  }
+}
