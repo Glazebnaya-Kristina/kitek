@@ -33,6 +33,20 @@
       font-weight: 400;
     }
   }
+
+  &--inline{
+    display: block;
+    line-height: 20px;
+    li{
+      display: inline;
+      &:last-child{
+        &:after{
+          top: 2px;
+          transform: translateY(0) rotate(13deg);
+        }
+      }
+    }
+  }
 }
 
 .theme-black{

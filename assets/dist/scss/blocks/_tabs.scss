@@ -1,0 +1,57 @@
+.tabs {
+  &__content {
+    display: none;
+  }
+  &__content.tabs-active {
+    display: block;
+  }
+  
+  &__caption{
+    @include ul-reset;
+    @media (min-width: $screen-1024) {
+      //padding-right: 65px;
+      max-width: 320px;
+    }
+    @media (min-width: $screen-1400) {
+      max-width: 325px;
+      //padding-right: 0;
+    }
+    .tabs-active {
+      font-weight: 700;
+      &:after{
+        opacity: 1;
+      }
+    }
+    li{
+      position: relative;
+      padding-left: 64px;
+      color: $color-white-white-theme;
+      line-height: 20px;
+      cursor: pointer;
+      @media (min-width: $screen-1400) {
+        padding-left: 84px;
+      }
+      &:not(:first-child){
+        margin-top: 26px;
+      }
+
+      &:after{
+        @include pseudo;
+        left: 0;
+        top: 9px;
+        width: 44px;
+        height: 2px;
+        background-color: $color-green;
+        opacity: 0;
+        transition: $transition-time;
+        @media (min-width: $screen-1400) {
+          width: 67px;
+        }
+      }
+    }
+  }
+
+  &__list{
+    @include ul-reset;
+  }
+}
