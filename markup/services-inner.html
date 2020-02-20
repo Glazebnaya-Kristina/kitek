@@ -85,16 +85,16 @@
                 <div class="tabs services-inner__tabs">
                     <aside class="services-inner__aside">
                         <ul class="tabs__caption">
-                            <li class="tabs-active">Custom web and mobile development</li>
-                            <li>Business process automation</li>
-                            <li>Marketing</li>
-                            <li>Business intelligence</li>
+                            <li class="tabs-active" id="tab-1">Custom web and mobile development</li>
+                            <li id="tab-2">Business process automation</li>
+                            <li id="tab-3">Marketing</li>
+                            <li id="tab-4">Business intelligence</li>
                         </ul>
                     </aside>
                     <div class="services-inner__case-wrapper">
                         <div class="services-inner__case-wrapper-inner">
                             <h3 class="services-inner__case-title">Cases:</h3>
-                            <ul class="services-inner__case-list services-inner__case-list--active">
+                            <ul class="services-inner__case-list services-inner__case-list--active" data-id="tab-1">
                                 <li class="services-inner__case-item">
                                     <a class="services-inner__case-link" href="#">Project name 1</a>
                                 </li>
@@ -108,7 +108,7 @@
                                     <a class="services-inner__case-link" href="#">Project name 4</a>
                                 </li>
                             </ul>
-                            <ul class="services-inner__case-list">
+                            <ul class="services-inner__case-list" data-id="tab-2">
                                 <li class="services-inner__case-item">
                                     <a class="services-inner__case-link" href="#">Project name2 1</a>
                                 </li>
@@ -122,7 +122,7 @@
                                     <a class="services-inner__case-link" href="#">Project name2 4</a>
                                 </li>
                             </ul>
-                            <ul class="services-inner__case-list">
+                            <ul class="services-inner__case-list" data-id="tab-3">
                                 <li class="services-inner__case-item">
                                     <a class="services-inner__case-link" href="#">Project name3 1</a>
                                 </li>
@@ -136,7 +136,7 @@
                                     <a class="services-inner__case-link" href="#">Project name3 4</a>
                                 </li>
                             </ul>
-                            <ul class="services-inner__case-list">
+                            <ul class="services-inner__case-list" data-id="tab-4">
                                 <li class="services-inner__case-item">
                                     <a class="services-inner__case-link" href="#">Project name4 1</a>
                                 </li>
@@ -154,7 +154,7 @@
                     </div>
                     <h2 class="title services-inner__title">Our <strong class="title__strong">services</strong></h2>
                     <ul class="tabs__list services-inner__tabs-list">
-                        <li class="tabs__content tabs-active">
+                        <li class="tabs__content tabs-active" data-id="tab-1">
                             <div class="services-inner__tab-header">
                                 <img class="services-inner__img" src="../img/index/about-us-1.png" alt="Logo tabs">
                                 <h3 class="services-inner__tab-title">Custom web and mobile development</h3>
@@ -169,7 +169,7 @@
                                 </p>
                             </div>
                         </li>
-                        <li class="tabs__content">
+                        <li class="tabs__content" data-id="tab-2">
                             <div class="services-inner__tab-header">
                                 <img class="services-inner__img" src="../img/index/about-us-2.png" alt="Logo tabs">
                                 <h3 class="services-inner__tab-title">Business process automation</h3>
@@ -184,7 +184,7 @@
                                 </p>
                             </div>
                         </li>
-                        <li class="tabs__content">
+                        <li class="tabs__content" data-id="tab-3">
                             <div class="services-inner__tab-header">
                                 <img class="services-inner__img" src="../img/index/about-us-3.png" alt="Logo tabs">
                                 <h3 class="services-inner__tab-title">Marketing</h3>
@@ -199,7 +199,7 @@
                                 </p>
                             </div>
                         </li>
-                        <li class="tabs__content">
+                        <li class="tabs__content" data-id="tab-4">
                             <div class="services-inner__tab-header">
                                 <img class="services-inner__img" src="../img/index/about-us-4.png" alt="Logo tabs">
                                 <h3 class="services-inner__tab-title">Business intelligence</h3>
