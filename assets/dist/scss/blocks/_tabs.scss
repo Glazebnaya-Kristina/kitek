@@ -9,12 +9,10 @@
   &__caption{
     @include ul-reset;
     @media (min-width: $screen-1024) {
-      //padding-right: 65px;
       max-width: 320px;
     }
     @media (min-width: $screen-1400) {
       max-width: 325px;
-      //padding-right: 0;
     }
     .tabs-active {
       font-weight: 700;
