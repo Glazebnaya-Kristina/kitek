@@ -91,6 +91,13 @@
     }
   }
 
+  &__case-link{
+    &:hover{
+      padding-left: 5px;
+      color: #36f5b3;
+    }
+  }
+
   &__tab-header{
     margin-top: 54px;
     @media (min-width: $screen-768) {

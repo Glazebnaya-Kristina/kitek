@@ -10,6 +10,9 @@
     background: none repeat scroll 0 0 transparent;
     cursor: inherit;
     display: block;
+    &:hover{
+      color: red;
+    }
   }
   .btn-file{
     position: relative;
@@ -17,6 +20,12 @@
     justify-content: center;
     margin-top: 49px;
     cursor: pointer;
+    &:hover{
+      .hidden-xs{
+        color: #36f5b3;
+        border-color: #36f5b3;
+      }
+    }
   }
   .file-input{
     margin-top: 20px;
@@ -56,6 +65,8 @@
     margin-bottom: 10px;
     border-bottom: 1px solid #6abb9f;
     color: $color-green;
+    cursor: pointer;
+    transition: $transition-time;
   }
   .file-size-info,
   .file-thumb-progress,
