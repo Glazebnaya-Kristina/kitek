@@ -19,11 +19,13 @@ $(document).ready(function () {
     localStorage.removeItem('clicked-tab');
   });
 
-  var localValue = localStorage.getItem('clicked-tab').replace('#', '');
-  $('.tabs__caption li[id=' + localValue + ']').addClass('tabs-active').siblings().removeClass('tabs-active')
-    .closest('.tabs').find('.tabs__content[data-id=' + localValue + ']').addClass('tabs-active').siblings().removeClass('tabs-active')
-    .closest('.tabs').find('.services-inner__case-list[data-id=' + localValue + ']')
-    .addClass('services-inner__case-list--active').siblings().removeClass('services-inner__case-list--active');
+  if (localStorage.getItem('clicked-tab') !== null){
+    var localValue = localStorage.getItem('clicked-tab').replace('#', '');
+    $('.tabs__caption li[id=' + localValue + ']').addClass('tabs-active').siblings().removeClass('tabs-active')
+      .closest('.tabs').find('.tabs__content[data-id=' + localValue + ']').addClass('tabs-active').siblings().removeClass('tabs-active')
+      .closest('.tabs').find('.services-inner__case-list[data-id=' + localValue + ']')
+      .addClass('services-inner__case-list--active').siblings().removeClass('services-inner__case-list--active');
+  }
 
   $('ul.tabs__caption').on('click', function () {
     getText();
