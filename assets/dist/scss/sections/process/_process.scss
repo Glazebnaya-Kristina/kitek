@@ -1,0 +1,426 @@
+.process {
+  padding-bottom: 67px;
+  @media (min-width: $screen-1400) {
+    padding-bottom: 85px;
+  }
+  &__inner {
+    @include container;
+    padding-right: 14px;
+  }
+
+  &__tab-container {
+    margin-top: 40px;
+    @media (min-width: $screen-1280) {
+      min-height: 557px;
+    }
+    @media (min-width: $screen-1400) {
+      margin-top: 70px;
+    }
+  }
+
+  &__tabs {
+    @include ul-reset;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+  }
+
+  &__tab-content{
+    @media (min-width: $screen-1280) {
+      display: flex;
+      justify-content: space-between;
+    }
+    @media (min-width: $screen-1280) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__tabs-item {
+    display: block;
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    @media (min-width: $screen-1400) {
+      font-size: 30px;
+    }
+  }
+
+  &__left {
+    padding-bottom: 78px;
+    @media (min-width: $screen-1280) {
+      margin-right: 35px;
+    }
+    @media (min-width: $screen-1400) {
+      max-width: 520px;
+      margin-right: 2px;
+      margin-left: 57px;
+    }
+  }
+
+  &__wrapper-description {
+    padding-top: 35px;
+
+    p {
+      &:not(:first-of-type) {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &__right {
+    position: relative;
+    z-index: 2;
+    margin: 0 -15px;
+    padding: 80px 15px;
+    background-color: #514ed6;
+    @media (min-width: $screen-768) {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      width: 564px;
+      margin: 0 auto;
+      padding: 43px 35px;
+      padding-bottom: 56px;
+    }
+    @media (min-width: $screen-1280) {
+      flex-shrink: 0;
+      align-self: flex-start;
+    }
+  }
+
+  &__subtitle {
+    color: #6e6be5;
+    font-size: 30px;
+    font-weight: 700;
+    @media (min-width: $screen-768) {
+      transform: rotate(-180deg);
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 9px;
+      font-size: 40px;
+      writing-mode: tb-rl;
+    }
+
+    &--spectial{
+      display: block;
+      line-height: 33px;
+      @media (min-width: $screen-768) {
+        height: 275px;
+        margin-left: -16px;
+        padding-right: 0;
+        line-height: 43px;
+      }
+
+      b{
+        display: block;
+        text-align: right;
+        font-weight: 700;
+        padding-right: 85px;
+        @media (min-width: $screen-768) {
+          padding: 0;
+        }
+      }
+      + ul{
+        @media (min-width: $screen-768) {
+          margin-left: 18px;
+        }
+      }
+    }
+  }
+
+  &__advantages-list {
+    @include ul-reset;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 238px;
+    margin-top: 14px;
+    padding-left: 29px;
+    padding-right: 30px;
+
+    @media (min-width: $screen-480) {
+      padding-left: 60px;
+    }
+    @media (min-width: $screen-768) {
+      height: 313px;
+      margin-top: 0;
+      margin-left: 51px;
+      padding-left: 44px;
+    }
+
+    &:after {
+      @include pseudo;
+      top: 6px;
+      left: -10px;
+      width: 103%;
+      height: 100%;
+      background-image: url('../img/process/ipad1.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100% 100%;
+      z-index: -1;
+      @media (min-width: $screen-768) {
+        top: 0;
+        height: 106%;
+      }
+    }
+
+    &:before {
+      @include pseudo;
+      right: 26px;
+      bottom: -46px;
+      width: 100px;
+      height: 85px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      z-index: 0;
+      @media (min-width: $screen-768) {
+        right: 26px;
+        bottom: -91px;
+        width: 147px;
+        height: 150px;
+        background-size: contain;
+      }
+    }
+
+    &--tab1 {
+      &:before {
+        background-image: url('../img/process/decor-1.png');
+      }
+    }
+    &--tab2 {
+      &:before {
+        right: 11px;
+        bottom: -46px;
+        width: 121px;
+        height: 93px;
+        background-size: contain;
+        background-image: url('../img/process/decor-2.png');
+        @media (min-width: $screen-768) {
+          right: -9px;
+          bottom: -70px;
+          width: 183px;
+          height: 150px;
+        }
+      }
+    }
+    &--tab3 {
+      &:before {
+        right: 14px;
+        bottom: -58px;
+        width: 125px;
+        height: 133px;
+        background-image: url('../img/process/decor-3.png');
+        @media (min-width: $screen-768) {
+          right: 26px;
+          bottom: -45px;
+          width: 190px;
+          height: 133px;
+        }
+      }
+    }
+    &--tab4 {
+      &:before {
+        right: 13px;
+        bottom: -62px;
+        width: 108px;
+        height: 126px;
+        background-image: url('../img/process/decor-4.png');
+        @media (min-width: $screen-768) {
+          right: 13px;
+          bottom: -126px;
+          width: 147px;
+          height: 203px;
+        }
+      }
+    }
+    &--tab5 {
+      &:before {
+        right: -2px;
+        bottom: -55px;
+        width: 153px;
+        height: 97px;
+        background-image: url('../img/process/decor-5.png');
+        @media (min-width: $screen-768) {
+          right: -2px;
+          bottom: -100px;
+          width: 225px;
+          height: 150px;
+        }
+      }
+    }
+  }
+
+  &__advantages-item {
+    font-size: 14px;
+    color: $color-white-white-theme;
+    @media (min-width: $screen-768) {
+      font-size: 20px;
+    }
+
+    &:not(:first-child){
+      @media (min-width: $screen-768) {
+        margin-top: 6px;
+      }
+    }
+  }
+
+  &__tab-number {
+    position: relative;
+    margin-top: 16px;
+    padding-left: 40px;
+    font-size: 25px;
+    font-weight: 700;
+    color: $white;
+    @media (min-width: $screen-768) {
+      grid-column: 1 / -1;
+      margin-top: 34px;
+      padding-left: 95px;
+      font-size: 40px;
+    }
+
+    &:before {
+      @include pseudo;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 31px;
+      height: 2px;
+      background-color: $white;
+      @media (min-width: $screen-768) {
+        width: 70px;
+        height: 4px;
+      }
+    }
+  }
+  
+  &__row-tab{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin-top: 66px;
+    @media (min-width: $screen-1280) {
+      margin-top: 0;
+    }
+  }
+
+
+  //&__tabs-content{
+  //  > div{
+  //    display: none;
+  //
+  //    &:first-child{
+  //      display: block;
+  //    }
+  //  }
+  //}
+}
+
+
+
+
+$black: #000;
+$white: #FFF;
+
+$width: 790px;
+$height: 40px;
+
+
+.boxes {
+  //position: absolute;
+  //left: 0;
+  width: 100%;
+  //max-width: $width;
+  //margin: 0 auto;
+  height: $height;
+  @media (min-width: $screen-1280) {
+    padding: 0 34px;
+  }
+}
+
+.box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.progress {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.bar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #18181b;
+  width: 100%;
+  height: 1px;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+
+  &__fill {
+    display: block;
+    background-color: $color-green;
+    height: 100%;
+  }
+}
+
+.point {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #AC9585;
+  cursor: pointer;
+  padding: 2px;
+  background-color: $white;
+  transition: $transition-time;
+
+  &--complete .bullet,
+  &--active .bullet{
+    border-color: $color-green;
+    background-color: $color-green;
+  }
+}
+
+.bullet {
+  position: relative;
+  z-index: 1;
+  width: 10px;
+  height: 10px;
+  border: 1px solid $color-black-white-theme;
+  background-color: $white;
+  border-radius: 100%;
+  transition: 0.3s ease;
+}
+
+.theme-black{
+  .bar{
+    background-color: #18181b;
+  }
+
+  .point{
+    background-color: #0c0b0a;
+    border-radius: 50%;
+
+    &--complete .bullet,
+    &--active .bullet{
+      border-color: $color-green;
+      background-color: $color-green;
+    }
+  }
+
+  .bullet{
+    border-color: #242424;
+    background-color: #242424;
+  }
+}

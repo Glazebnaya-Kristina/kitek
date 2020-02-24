@@ -48,6 +48,7 @@ module.exports = function (grunt) {
                'markup/js/jcf.radio.min.js': ['assets/dist/js/plugin/jcf.radio.js'],
                'markup/js/jcf.min.js': ['assets/dist/js/plugin/jcf.js'],
                'markup/js/fileinput.min.js': ['assets/dist/js/plugin/fileinput.js'],
+               'markup/js/TweenMax.min.js': ['assets/dist/js/plugin/TweenMax.min.js'],
                'markup/js/script.min.js': ['assets/dist/js/script.js'],
 
 
@@ -60,6 +61,7 @@ module.exports = function (grunt) {
                'markup/js/cases.min.js': ['assets/dist/js/cases.js'],
                'markup/js/case-study.min.js': ['assets/dist/js/case-study.js'],
                'markup/js/services-inner.min.js': ['assets/dist/js/services-inner.js'],
+               'markup/js/process.min.js': ['assets/dist/js/process.js'],
             }
          }
       },
