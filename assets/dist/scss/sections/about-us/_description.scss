@@ -65,10 +65,6 @@
       line-height: 30px;
       &:not(:first-child){
         margin-top: 30px;
-        display: none;
-        @media (min-width: $screen-1024) {
-          display: block;
-        }
       }
     }
   }
@@ -94,15 +90,5 @@
       }
     }
   }
-
-  //.morecontent span {
-  //  display: none;
-  //}
-  //.morelink {
-  //  display: block;
-  //}
 }
 
-.theme-black{
-  .description{}
-}

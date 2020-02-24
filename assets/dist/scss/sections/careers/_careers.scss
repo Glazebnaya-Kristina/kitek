@@ -172,10 +172,6 @@
 
       &:not(:first-child) {
         margin-top: 22px;
-        display: none;
-        @media (min-width: $screen-1024) {
-          display: block;
-        }
       }
     }
   }
@@ -194,7 +190,7 @@
 
   .js-more {
     &--active {
-      .description__icon {
+      .careers__content-icon {
         &:before {
           transform: rotate(-90deg);
         }
