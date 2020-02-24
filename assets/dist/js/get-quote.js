@@ -6,4 +6,6 @@ $(document).ready(function () {
   });
 
   $('.btn-file .hidden-xs').text('Attach Files');
+
+  $('.input[type="tel"]').inputmask("+9-999-99-999");
 });
